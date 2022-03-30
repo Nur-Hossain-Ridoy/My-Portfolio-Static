@@ -13,3 +13,14 @@ closeMenuIcon.addEventListener('click', () => {
     navMenu.style.bottom = "-999%";
 })
 
+/* ----------------- menu bar close when user click a link ------------------- */
+let navLink = document.querySelectorAll('.nav-link');
+
+function activeLink() {
+    navMenu.style.bottom = "-999%";
+}
+
+navLink.forEach(function(ele) {
+    ele.addEventListener('click', activeLink)
+})
+
