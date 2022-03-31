@@ -134,6 +134,10 @@ li .nav--icon {
   font-size: 2.2rem;
 }
 
+.active-link {
+  color: #6E57E0;
+}
+
 /*! ------------------ home section -------------------- */
 section#home {
   height: 95vh;
