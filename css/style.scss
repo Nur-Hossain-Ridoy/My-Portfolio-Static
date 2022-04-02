@@ -16,11 +16,12 @@ html{
 
 body {
   font-family: "Poppins", sans-serif;
+  background: #fbfbfe;
 }
 
 a {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: #000;
 }
 
@@ -47,6 +48,7 @@ section {
   margin-top: .5rem;
   font-size: 1.5rem;
   font-weight: 400;
+  color: #6d6a7c;
 }
 
 button {
@@ -375,3 +377,181 @@ section#contact {
   }
 }
 
+/*! ------------------ media query for across devices -------------------- */
+@media  screen and (min-width: 500px) {
+  section#home {
+    padding: 0 6rem;
+
+    .hero-img {
+      margin: 2rem 4rem 0;
+    }
+
+    .description {
+      margin-top: -23rem;
+    }
+
+    svg {
+      width: 225px;
+    }
+  }
+
+  section#qualification {
+    .quali-info {
+      padding-left: 3rem;
+    }
+  }
+
+  section#contact {
+    padding: 0 6rem 6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section#home,
+  section#about,
+  section#qualification,
+  section#contact {
+    padding: 8rem 4.5rem;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 2rem 3.2rem;
+    height: 4rem;
+  }
+
+  ul {
+    bottom: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 680px;
+    align-items: center;
+  }
+
+  nav .nav-menu {
+    position: unset;
+    background-color: unset;
+    display: flex;
+    gap: 0 2.5rem;
+    align-items: center;
+    justify-content: end;
+    margin-top: 1.6rem;
+    .nav--icon {
+      display: none;
+    }
+
+    a {
+      font-size: 1.4rem;
+    }
+  }
+
+  .close-menu-icon,
+  .show-menu-icon {
+    display: none;
+  }
+
+  section {
+    padding: 1.5rem 4.5rem;
+  }
+
+  /*! ------------------ section home -------------------- */
+  section#home {
+    display: grid;
+    grid-template-columns: max-content 1fr 1fr;
+    gap: 0 5rem;
+
+    .description {
+      grid-column: unset;
+
+      .title {
+        font-size: 3.2rem;
+      }
+
+      .subtitle {
+        font-size: 1.8rem;
+      }
+    }
+
+    .home-scroll {
+      a {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      span  {
+        font-size: 1.3rem;
+     }
+
+     i {
+       font-size: 3.2rem;
+       color: #6E57E0;
+       padding-right: 0.5rem;
+     }
+    }
+  }
+
+  /*! ------------------ about -------------------- */
+  #about h1.title {
+    font-size: 2.4rem;
+  }
+  .about-data {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .about-description {
+    margin-top: 4.5rem;
+  }
+
+  .about-info {
+    justify-content: space-between;
+  }
+  /*! ------------------ qualification -------------------- */
+  #qualification h1.title {
+    font-size: 2.4rem;
+  }
+
+  section#qualification {
+    margin-top: 8rem;
+  }
+
+  .quali-info {
+    width: 80%;
+    margin: 6rem auto;
+  }
+  .qualification-data {
+    margin-left: 3rem;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+    header,
+    main {
+      width: 76%;
+      margin: 0 auto;
+    }
+   section#home {
+    svg {
+      width: 300px;
+    }
+   }
+}
+
+@media screen and (min-width: 1100px) {
+  section#home,
+  section#about,
+  section#qualification,
+  section#contact {
+    padding: 8rem 15rem;
+  }
+}

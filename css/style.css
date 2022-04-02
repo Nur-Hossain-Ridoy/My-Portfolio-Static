@@ -14,11 +14,12 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  background: #fbfbfe;
 }
 
 a {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: #000;
 }
 
@@ -45,6 +46,7 @@ section {
   margin-top: .5rem;
   font-size: 1.5rem;
   font-weight: 400;
+  color: #6d6a7c;
 }
 
 button {
@@ -420,5 +422,184 @@ section#contact .contact-form button i {
 section#contact .contact-form div {
   text-align: left;
   margin-bottom: 2rem;
+}
+
+/*! ------------------ media query for across devices -------------------- */
+@media screen and (min-width: 500px) {
+  section#home {
+    padding: 0 6rem;
+  }
+  section#home .hero-img {
+    margin: 2rem 4rem 0;
+  }
+  section#home .description {
+    margin-top: -23rem;
+  }
+  section#home svg {
+    width: 225px;
+  }
+  section#qualification .quali-info {
+    padding-left: 3rem;
+  }
+  section#contact {
+    padding: 0 6rem 6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section#home,
+  section#about,
+  section#qualification,
+  section#contact {
+    padding: 8rem 4.5rem;
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 2rem 3.2rem;
+    height: 4rem;
+  }
+  ul {
+    bottom: none;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 auto;
+    width: 680px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .nav-menu {
+    position: unset;
+    background-color: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0 2.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    margin-top: 1.6rem;
+  }
+  nav .nav-menu .nav--icon {
+    display: none;
+  }
+  nav .nav-menu a {
+    font-size: 1.4rem;
+  }
+  .close-menu-icon,
+  .show-menu-icon {
+    display: none;
+  }
+  section {
+    padding: 1.5rem 4.5rem;
+  }
+  /*! ------------------ section home -------------------- */
+  section#home {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: max-content 1fr 1fr;
+        grid-template-columns: -webkit-max-content 1fr 1fr;
+        grid-template-columns: max-content 1fr 1fr;
+    gap: 0 5rem;
+  }
+  section#home .description {
+    grid-column: unset;
+  }
+  section#home .description .title {
+    font-size: 3.2rem;
+  }
+  section#home .description .subtitle {
+    font-size: 1.8rem;
+  }
+  section#home .home-scroll a {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section#home .home-scroll span {
+    font-size: 1.3rem;
+  }
+  section#home .home-scroll i {
+    font-size: 3.2rem;
+    color: #6E57E0;
+    padding-right: 0.5rem;
+  }
+  /*! ------------------ about -------------------- */
+  #about h1.title {
+    font-size: 2.4rem;
+  }
+  .about-data {
+    padding-top: 2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-description {
+    margin-top: 4.5rem;
+  }
+  .about-info {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  /*! ------------------ qualification -------------------- */
+  #qualification h1.title {
+    font-size: 2.4rem;
+  }
+  section#qualification {
+    margin-top: 8rem;
+  }
+  .quali-info {
+    width: 80%;
+    margin: 6rem auto;
+  }
+  .qualification-data {
+    margin-left: 3rem;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header,
+  main {
+    width: 76%;
+    margin: 0 auto;
+  }
+  section#home svg {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  section#home,
+  section#about,
+  section#qualification,
+  section#contact {
+    padding: 8rem 15rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

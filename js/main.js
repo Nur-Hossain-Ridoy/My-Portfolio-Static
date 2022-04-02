@@ -13,10 +13,21 @@ closeMenuIcon.addEventListener('click', () => {
     navMenu.style.bottom = "-999%";
 })
 
+let navLink = document.querySelectorAll('.nav-link');
+
+function activeLink() {
+    navMenu.style.bottom = "-999%";
+}
+
+navLink.forEach(function(ele) {
+    ele.addEventListener('click', activeLink)
+})
+
+
 /* ----------------- scroll ------------------- */
 let sections = document.querySelectorAll('section');
 
-function activeLink() {
+function activeLinkForWide() {
     let scrollY = window.scrollY;
     
     sections.forEach((currentSection) => {
@@ -32,17 +43,5 @@ function activeLink() {
     })
 }
 
-window.addEventListener('scroll', activeLink);
-
-
-/* ----------------- menu bar close when user click a link ------------------- */
-let navLink = document.querySelectorAll('.nav-link');
-
-function activeLink() {
-    navMenu.style.bottom = "-999%";
-}
-
-navLink.forEach(function(ele) {
-    ele.addEventListener('click', activeLink)
-})
+window.addEventListener('scroll', activeLinkForWide);
 
