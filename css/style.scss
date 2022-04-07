@@ -377,6 +377,17 @@ section#contact {
   }
 }
 
+/*! ------------------ scroll up -------------------- */
+.scroll-up {
+  color: #6E57E0;
+  font-size: 2.8rem;
+  position: fixed;
+  bottom: 0;
+  right: 3rem;
+  transition: 0.7s;
+}
+
+
 /*! ------------------ media query for across devices -------------------- */
 @media  screen and (min-width: 500px) {
   section#home {
@@ -469,6 +480,7 @@ section#contact {
 
     .description {
       grid-column: unset;
+      margin-top: 0;
 
       .title {
         font-size: 3.2rem;
@@ -553,5 +565,15 @@ section#contact {
   section#qualification,
   section#contact {
     padding: 8rem 15rem;
+  }
+
+  section#home {
+    gap: 2rem;
+    max-width: 950px;
+    margin: auto;
+
+    .description {
+      margin-top: 0;
+    }
   }
 }

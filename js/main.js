@@ -45,3 +45,13 @@ function activeLinkForWide() {
 
 window.addEventListener('scroll', activeLinkForWide);
 
+/* ----------------- scroll up ------------------- */
+let scrollUp = document.querySelector('.scroll-up');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 550) {
+        scrollUp.style.bottom = '6rem';
+    } else {
+        scrollUp.style.bottom = '-100%';
+    }
+})
